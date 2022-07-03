@@ -1,0 +1,17 @@
+services:
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./.db/:/data/db
+
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGODB_CONNECTIONSTRING=mongodb://database:27017/todo-list
+      - PORT=8080
+    depends_on:
+      - database
