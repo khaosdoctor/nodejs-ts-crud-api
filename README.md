@@ -8,5 +8,5 @@
 
 ## Environment
 
-- `PORT`: A porta onde o serviço da API vai ouvir / The port the server will listen on
+- `PORT` [default 3000]: A porta onde o serviço da API vai ouvir / The port the server will listen on
 - `MONGODB_CONNECTIONSTRING`: A URL de conexão com o MongoDB / The MongoDB connection URL
